@@ -31,4 +31,4 @@ Where:
 ## 🚀 Usage
 
 ```bash
-$ python3 entropy_analyzer.py
+$ python3 entropy_analyzer.py [your DATA file]
