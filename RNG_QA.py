@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import math
 import multiprocessing
@@ -19,20 +20,29 @@ def calculate_entropy(data):
     return entropy
 
 def process_chunk(chunk):
-    entropy = calculate_entropy(chunk)
-    return entropy
+    return calculate_entropy(chunk)
 
 def read_binary_file(filepath):
     with open(filepath, 'rb') as f:
         return f.read()
 
 def main():
-    filepath = input("Enter the path to the binary file: ").strip()
+    # Require command-line argument only
+    if len(sys.argv) != 2:
+        print("Usage: python RNG_QA.py <binary_file>")
+        sys.exit(1)
+
+    filepath = sys.argv[1]
+
+    if not os.path.isfile(filepath):
+        print(f"Error: File '{filepath}' not found.")
+        sys.exit(1)
+
     try:
         data = read_binary_file(filepath)
     except Exception as e:
         print(f"Error reading file: {e}")
-        return
+        sys.exit(1)
 
     num_cores = multiprocessing.cpu_count()
     chunk_size = len(data) // num_cores
@@ -56,8 +66,8 @@ def main():
     for i, ent in enumerate(entropies):
         print(f"Chunk {i + 1}: Entropy = {ent:.6f}")
 
-    total_entropy = sum(entropies) / len(entropies)
-    print(f"\nAverage Entropy: {total_entropy:.6f}")
+    average_entropy = sum(entropies) / len(entropies)
+    print(f"\nAverage Entropy: {average_entropy:.6f}")
     print(f"Total Processing Time: {end_time - start_time:.3f} seconds")
     print("=== End of Report ===\n")
 
