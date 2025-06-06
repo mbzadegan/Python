@@ -5,7 +5,12 @@ from boofuzz.connections import TCPSocketConnection
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: python boofuzz.py <target_ip> <port>")
+        print("\n[!] Usage: python boofuzz.py <target_ip> <port>")
+        print("    Example: python boofuzz.py 127.0.0.1 8080\n")
+        print("    This fuzzer will send mutated HTTP GET requests to the target.")
+        print("    Logs will be written to: ./boofuzz_logs/http_fuzz.log")
+        print("\n📺 To watch fuzzing progress in real-time:")
+        print("    tail -f boofuzz_logs/http_fuzz.log\n")
         sys.exit(1)
 
     target_ip = sys.argv[1]
@@ -52,7 +57,7 @@ def main():
     try:
         session.fuzz()
     except Exception as e:
-        print(f"Fuzzing stopped: {e}")
+        print(f"[!] Fuzzing stopped: {e}")
 
 if __name__ == "__main__":
     main()
