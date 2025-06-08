@@ -52,7 +52,7 @@ def main():
     s_string("Accept: */*\r\n", fuzzable=True)
     s_static("\r\n")
 
-    # Run fuzz
+    # Run fuzzer
     session.connect(s_get("HTTP GET Fuzz"))
     try:
         session.fuzz()
