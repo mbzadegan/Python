@@ -5,7 +5,7 @@ import math
 import multiprocessing
 
 def calculate_entropy(data):
-    """Calculate Shannon entropy of given bytes"""
+    """Calculate Shannon entropy of given bytes."""
     if not data:
         return 0.0
     frequency = [0] * 256
