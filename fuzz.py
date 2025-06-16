@@ -45,7 +45,7 @@ def main():
     parser.add_argument("--count", type=int, default=100, help="Number of packets to send (default: 100)")
     parser.add_argument("--delay", type=float, default=0.01, help="Delay between packets (default: 0.01s)")
 
-    # If no args are passed, print usage
+    # If no args are passed, print usage.
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(0)
