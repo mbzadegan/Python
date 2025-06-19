@@ -41,7 +41,7 @@ def fuzz_icmp(target, count, delay):
 def main():
     parser = argparse.ArgumentParser(description="Black-box packet fuzzer")
     parser.add_argument("--target", help="Target IP address")
-    parser.add_argument("--proto", choices=["tcp", "udp", "icmp"], help="Protocol to fuzz")
+    parser.add_argument("--proto", choices=["tcp", "udp", "icmp"], help="Fuzzing protocol")
     parser.add_argument("--count", type=int, default=100, help="Number of packets to send (default: 100)")
     parser.add_argument("--delay", type=float, default=0.01, help="Delay between packets (default: 0.01s)")
 
