@@ -2,7 +2,7 @@
 # A room or environment in 3D.
 # Known receiver positions (microphones or radio receivers).
 # Transmitters emitting acoustic pulses.
-# Time-of-arrival (ToA) or time-difference-of-arrival (TDoA) measurements.
+# Time-of-arrival (ToA) or time-difference-of-arrival (TDoA) measurements
 # Trilateration to estimate transmitter (source) positions.
 # Optionally estimating basic room reflection (multipath) delay characteristics.
 
