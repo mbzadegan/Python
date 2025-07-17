@@ -4,6 +4,7 @@ import time
 import math
 import multiprocessing
 
+
 def calculate_entropy(data):
     """Calculate Shannon entropy of given bytes"""
     if not data:
