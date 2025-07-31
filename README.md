@@ -1,6 +1,6 @@
 # Entropy Analyzer (Multithreaded)
 
-This Python script assesses the **quality of input binary data** by computing its **Shannon entropy** using **all available CPU cores in parallel**.
+This Python script assesses the **quality of input binary data** by computing its **Shannon entropy** using **all available CPU cores in parallel**
 
 ## 🔍 Method
 
