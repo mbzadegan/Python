@@ -17,7 +17,7 @@ def extract_text(image_path):
     # Convert to grayscale (helps OCR)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Optional: Apply threshold to clean the image
+    # Optional: Apply a threshold to clean the image
     gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 
     # Use pytesseract to extract text
@@ -31,3 +31,4 @@ if __name__ == "__main__":
         print("Usage: python ocr_image.py <image_path>")
     else:
         extract_text(sys.argv[1])
+
