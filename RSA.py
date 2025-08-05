@@ -1,5 +1,5 @@
 # Here's the updated Python RSA script that hard-codes two large primes for p and q, instead of asking the user to input them. 
-# User still inputs e and the message M, and the script performs key generation, encryption, decryption, and reports processing time (excluding input).
+# User still inputs e and the message M, and the script performs key generation, encryption, decryption, and reports processing time (excluding input)
 
 
 import time
