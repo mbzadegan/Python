@@ -2,7 +2,6 @@
 # sudo apt install tesseract-ocr
 
 
-
 import sys
 import cv2
 import pytesseract
@@ -31,4 +30,5 @@ if __name__ == "__main__":
         print("Usage: python ocr_image.py <image_path>")
     else:
         extract_text(sys.argv[1])
+
 
