@@ -7,7 +7,7 @@ def main():
     if len(sys.argv) != 3:
         print("\n[!] Usage: python boofuzz.py <target_ip> <port>")
         print("    Example: python boofuzz.py 127.0.0.1 8080\n")
-        print("    This fuzzer will send mutated HTTP GET requests to the target")
+        print("    This fuzzer will send mutated HTTP GET requests to the target.")
         print("    Logs will be written to: ./boofuzz_logs/http_fuzz.log")
         print("\n📺 To watch fuzzing progress in real-time:")
         print("    tail -f boofuzz_logs/http_fuzz.log\n")
