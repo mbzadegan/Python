@@ -21,7 +21,7 @@ def main():
     os.makedirs(log_dir, exist_ok=True)
     log_path = os.path.join(log_dir, "http_fuzz.log")
 
-    # Set up target
+    # Set up a target
     target = Target(connection=TCPSocketConnection(target_ip, target_port))
 
     # Set up logger
