@@ -17,8 +17,8 @@ Where:
 
 ### Entropy Scale (8-bit data)
 
-- **0.0** → completely uniform (e.g., all zeros)
-- **8.0** → maximum randomness (e.g., cryptographic random data)
+- **0.0** → completely uniform (e.g. all zeros)
+- **8.0** → maximum randomness (e.g. cryptographic random data)
 
 ## ⚙️ Features
 
